@@ -91,7 +91,7 @@ func (r *report) print() {
 // Prints percentile latencies.
 func (r *report) printLatencies() {
 
-	filename := "latency_1.csv"
+	filename := csvfile
 	file, _ := os.OpenFile(filename, os.O_RDWR|os.O_CREATE|os.O_APPEND, 0777)
 	stats := csv.NewWriter(file)
 	defer stats.Flush()

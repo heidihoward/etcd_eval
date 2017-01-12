@@ -27,7 +27,7 @@ var RootCmd = &cobra.Command{
 	Use:   "benchmark",
 	Short: "A low-level benchmark tool for etcd3",
 	Long: `benchmark is a low-level benchmark tool for etcd3.
-It uses gRPC client directly and does not depend on 
+It uses gRPC client directly and does not depend on
 etcd client library.
 	`,
 }
@@ -44,6 +44,8 @@ var (
 
 	tls transport.TLSInfo
 
+	csvfile string
+
 	cpuProfPath string
 	memProfPath string
 )
@@ -57,4 +59,6 @@ func init() {
 	RootCmd.PersistentFlags().StringVar(&tls.CertFile, "cert", "", "identify HTTPS client using this SSL certificate file")
 	RootCmd.PersistentFlags().StringVar(&tls.KeyFile, "key", "", "identify HTTPS client using this SSL key file")
 	RootCmd.PersistentFlags().StringVar(&tls.CAFile, "cacert", "", "verify certificates of HTTPS-enabled servers using this CA bundle")
+	RootCmd.PersistentFlags().StringVar(&csvfile, "csv", "latency_1.csv", "filename of results as csv")
+
 }
