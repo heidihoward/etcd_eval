@@ -21,7 +21,7 @@ import (
 	"runtime/pprof"
 	"time"
 
-	"github.com/coreos/etcd/lease"
+	"gopkg.in/coreos/etcd.v3/lease"
 	"github.com/spf13/cobra"
 )
 
@@ -146,5 +146,5 @@ func mvccPutFunc(cmd *cobra.Command, args []string) {
 	// TODO: Currently this benchmark doesn't use the common histogram infrastructure.
 	// This is because an accuracy of the infrastructure isn't suitable for measuring
 	// performance of kv storage:
-	// https://github.com/coreos/etcd/pull/4070#issuecomment-167954149
+	// https://gopkg.in/coreos/etcd.v3/pull/4070#issuecomment-167954149
 }

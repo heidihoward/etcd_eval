@@ -17,7 +17,7 @@ package cmd
 import (
 	"sync"
 
-	"github.com/coreos/etcd/pkg/transport"
+	"gopkg.in/coreos/etcd.v3/pkg/transport"
 	"github.com/spf13/cobra"
 	"gopkg.in/cheggaaa/pb.v1"
 )
