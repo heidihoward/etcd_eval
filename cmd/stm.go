@@ -21,8 +21,8 @@ import (
 	"os"
 	"time"
 
-	v3 "gopkg.in/coreos/etcd.v3/clientv3"
-	v3sync "gopkg.in/coreos/etcd.v3/clientv3/concurrency"
+	v3 "github.com/coreos/etcd/clientv3"
+	v3sync "github.com/coreos/etcd/clientv3/concurrency"
 	"github.com/spf13/cobra"
 	"golang.org/x/net/context"
 	"gopkg.in/cheggaaa/pb.v1"

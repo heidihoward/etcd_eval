@@ -19,7 +19,7 @@ import (
 	"os"
 	"time"
 
-	v3 "gopkg.in/coreos/etcd.v3/clientv3"
+	v3 "github.com/coreos/etcd/clientv3"
 	"github.com/spf13/cobra"
 	"golang.org/x/net/context"
 	"gopkg.in/cheggaaa/pb.v1"

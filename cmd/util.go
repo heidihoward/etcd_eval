@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"os"
 
-	"gopkg.in/coreos/etcd.v3/clientv3"
+	"github.com/coreos/etcd/clientv3"
 )
 
 var (

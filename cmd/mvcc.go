@@ -18,9 +18,9 @@ import (
 	"os"
 	"time"
 
-	"gopkg.in/coreos/etcd.v3/lease"
-	"gopkg.in/coreos/etcd.v3/mvcc"
-	"gopkg.in/coreos/etcd.v3/mvcc/backend"
+	"github.com/coreos/etcd/lease"
+	"github.com/coreos/etcd/mvcc"
+	"github.com/coreos/etcd/mvcc/backend"
 	"github.com/spf13/cobra"
 )
 
