@@ -98,7 +98,7 @@ func (r *report) printLatencies() {
 
 	for i := 0; i < len(r.lats); i++ {
 		latency := strconv.FormatInt(r.lats[i].Nanoseconds(), 10)
-		stats.Write([]string{strconv.Itoa(r.times[i].UnixNano()), strconv.Itoa(i), latency, strconv.Itoa(1)})
+		stats.Write([]string{strconv.FormatInt(r.times[i].UnixNano(),10), strconv.Itoa(i), latency, strconv.Itoa(1)})
 
 	}
 	stats.Flush()
