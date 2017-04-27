@@ -32,15 +32,6 @@ func mustCreateConn() *clientv3.Client {
 	endpoint := endpoints[dialTotal%len(endpoints)]
 	dialTotal++
 	cfg := clientv3.Config{Endpoints: []string{endpoint}}
-	if !tls.Empty() {
-		cfgtls, err := tls.ClientConfig()
-		if err != nil {
-			fmt.Fprintf(os.Stderr, "bad tls config: %v\n", err)
-			os.Exit(1)
-		}
-		cfg.TLS = cfgtls
-	}
-
 	client, err := clientv3.New(cfg)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "dial error: %v\n", err)

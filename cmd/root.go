@@ -17,7 +17,6 @@ package cmd
 import (
 	"sync"
 
-	"github.com/coreos/etcd/pkg/transport"
 	"github.com/spf13/cobra"
 	"gopkg.in/cheggaaa/pb.v1"
 )
@@ -42,7 +41,6 @@ var (
 	results chan result
 	wg      sync.WaitGroup
 
-	tls transport.TLSInfo
 
 	csvfile string
 
@@ -56,9 +54,6 @@ func init() {
 	RootCmd.PersistentFlags().UintVar(&totalClients, "clients", 1, "Total number of gRPC clients")
 
 	RootCmd.PersistentFlags().BoolVar(&sample, "sample", false, "'true' to sample requests for every second")
-	RootCmd.PersistentFlags().StringVar(&tls.CertFile, "cert", "", "identify HTTPS client using this SSL certificate file")
-	RootCmd.PersistentFlags().StringVar(&tls.KeyFile, "key", "", "identify HTTPS client using this SSL key file")
-	RootCmd.PersistentFlags().StringVar(&tls.CAFile, "cacert", "", "verify certificates of HTTPS-enabled servers using this CA bundle")
-	RootCmd.PersistentFlags().StringVar(&csvfile, "csv", "latency_1.csv", "filename of results as csv")
+  RootCmd.PersistentFlags().StringVar(&csvfile, "csv", "latency_1.csv", "filename of results as csv")
 
 }
